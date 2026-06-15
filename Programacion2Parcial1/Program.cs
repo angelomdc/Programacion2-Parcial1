@@ -151,6 +151,23 @@ class Program
         }
 
         Console.WriteLine();
+        // Ejercicio 6: Crear una cuenta bancaria
+        CuentaBancaria cuenta = new CuentaBancaria();
+
+        // Realizar un depósito
+        cuenta.Depositar(5000);
+
+        // Mostrar el saldo almacenado en la cuenta
+        Console.WriteLine($"Saldo actual: {cuenta.ObtenerSaldo()}");
+
+        // Ejercicio 7: Probar la implementación de la interfaz IVehiculo
+        Carro carro = new Carro();
+        carro.Encender();
+        carro.Apagar();
+
+        Motocicleta moto = new Motocicleta();
+        moto.Encender();
+        moto.Apagar();
     }
 }
 
