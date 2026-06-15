@@ -66,7 +66,7 @@ class Program
         int numero = Convert.ToInt32(Console.ReadLine());
 
         //Aqui se verifica si el numero es par o impar
-         if (numero % 2 == 0)
+        if (numero % 2 == 0)
         {
             Console.WriteLine($"El número {numero} es par.");
         }
@@ -104,54 +104,54 @@ class Program
         persona3.Presentacion();
 
         Console.WriteLine();
+
+
+        //4. Herencia
+
+        Console.WriteLine("////////////////////////////////////////////////////");
+        Console.WriteLine(" Herencia ");
+        Console.WriteLine("////////////////////////////////////////////////////");
+        Console.WriteLine();
+
+        // Se crean objetos de las clases Perro y Gato.
+
+        Perro perro = new Perro();
+        Gato gato = new Gato();
+
+        // Se llama al método HacerSonido de cada objeto.
+
+
+        perro.HacerSonido();
+        gato.HacerSonido();
+
+        Console.WriteLine();
+
+        //5. Polimorfismo
+
+        Console.WriteLine("////////////////////////////////////////////////////");
+        Console.WriteLine(" Polimorfismo ");
+        Console.WriteLine("////////////////////////////////////////////////////");
+        Console.WriteLine();
+        // Lista que almacena objetos de diferentes clases derivadas de Animal.
+
+        List<Animal> animales = new List<Animal>();
+
+        // Se agregan objetos Perro y Gato a la lista.
+
+
+        animales.Add(new Perro());
+        animales.Add(new Gato());
+
+        // Se recorre la lista y se ejecuta el método correspondiente a cada objeto.
+        // Esto demuestra el uso del polimorfismo.
+
+        foreach (Animal animal in animales)
+        {
+            animal.HacerSonido();
+        }
+
+        Console.WriteLine();
     }
-
-    //4. Herencia
-
-    Console.WriteLine("////////////////////////////////////////////////////");
-Console.WriteLine(" Herencia ");
-Console.WriteLine("////////////////////////////////////////////////////");
-Console.WriteLine();
-
-// Se crean objetos de las clases Perro y Gato.
-
-Perro perro = new Perro();
-    Gato gato = new Gato();
-
-    // Se llama al método HacerSonido de cada objeto.
-
-
-    perro.HacerSonido();
-gato.HacerSonido();
-
-Console.WriteLine();
-
-//5. Polimorfismo
-
-Console.WriteLine("////////////////////////////////////////////////////");
-Console.WriteLine(" Polimorfismo ");
-Console.WriteLine("////////////////////////////////////////////////////");
-Console.WriteLine();
-// Lista que almacena objetos de diferentes clases derivadas de Animal.
-
-List<Animal> animales = new List<Animal>();
-
-// Se agregan objetos Perro y Gato a la lista.
-
-
-    animales.Add(new Perro());
-animales.Add(new Gato());
-
-// Se recorre la lista y se ejecuta el método correspondiente a cada objeto.
-// Esto demuestra el uso del polimorfismo.
-
-foreach (Animal animal in animales)
-{
-    animal.HacerSonido();
 }
-
-Console.WriteLine();
-}
-
 
 
