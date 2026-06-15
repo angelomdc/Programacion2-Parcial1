@@ -1,6 +1,7 @@
 ﻿//Proyecto Programacion 2 - Parcial 1
 
 using System;
+using System.Collections.Generic;
 
 //Clase Persona
 // Esta clase le da nombre y edad a una persona
@@ -104,4 +105,53 @@ class Program
 
         Console.WriteLine();
     }
+
+    //4. Herencia
+
+    Console.WriteLine("////////////////////////////////////////////////////");
+Console.WriteLine(" Herencia ");
+Console.WriteLine("////////////////////////////////////////////////////");
+Console.WriteLine();
+
+// Se crean objetos de las clases Perro y Gato.
+
+Perro perro = new Perro();
+    Gato gato = new Gato();
+
+    // Se llama al método HacerSonido de cada objeto.
+
+
+    perro.HacerSonido();
+gato.HacerSonido();
+
+Console.WriteLine();
+
+//5. Polimorfismo
+
+Console.WriteLine("////////////////////////////////////////////////////");
+Console.WriteLine(" Polimorfismo ");
+Console.WriteLine("////////////////////////////////////////////////////");
+Console.WriteLine();
+// Lista que almacena objetos de diferentes clases derivadas de Animal.
+
+List<Animal> animales = new List<Animal>();
+
+// Se agregan objetos Perro y Gato a la lista.
+
+
+    animales.Add(new Perro());
+animales.Add(new Gato());
+
+// Se recorre la lista y se ejecuta el método correspondiente a cada objeto.
+// Esto demuestra el uso del polimorfismo.
+
+foreach (Animal animal in animales)
+{
+    animal.HacerSonido();
 }
+
+Console.WriteLine();
+}
+
+
+
